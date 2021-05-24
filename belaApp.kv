@@ -1,0 +1,275 @@
+<belaLayout>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source:  'pexels-cards.jpg'
+
+    orientation: "vertical"
+    # spacing: 10
+
+    # BoxLayout:
+    #     id: id_osvjezi
+      
+    Button:
+        text: "Reset"
+        background_color: (0, 2,0, 1)
+        font_size: 20
+        color: "white"
+        bold: True 
+        on_press:root.reset()
+        width: len(self.text) * 10
+        text_size: self.width, None
+        halign:'center'
+        #size: 95, 50
+        size_hint: .3, .8
+        #size_hint: .4,.4
+            #pos: root.x, root.top-50
+        pos_hint: {'center_x':0.5}
+            
+            
+            
+
+    AnchorLayout:
+        id: karte
+        anchor_x: "center" #right, left, center
+        anchor_y: "top"
+    #     #orientation: "vertical"
+    #     # spacing: 10
+    #     # padding: 40
+    #     anchor_x: "center" #right, left, center
+    #     anchor_y: "top" # bottom, top, center
+        BoxLayout:
+            center: root.center
+            spacing: "70dp"
+            Button:
+                width: len(self.text) * 10
+                text_size: self.width, None
+                halign:'center'
+                id: id_decko
+                text: "Dečko"
+                bold: True
+                font_size: 18
+                color: "black"
+                bg_normal: ''
+                background_color: (191, 191, 191, 0.82)
+                on_press: root.incrementDecko()
+                #on_release:id_decko. background_color=(191, 191, 191, 0.82)
+                size_hint: .1,.8
+                #size: 95, 50
+                #size_hint:(0.25, 0.18) 
+                #pos_hint: {'center_x':0.5}
+        
+            Button:
+                id: id_baba
+                width: len(self.text) * 10
+                text_size: self.width, None
+                halign:'center'
+                text: "Baba"
+                bold: True
+                font_size: 18
+                color: "black"
+                bg_normal: ''
+                background_color: (191, 191, 191, 0.82)
+                on_press: root.incrementBaba()
+                size_hint: .1,.8
+    AnchorLayout:
+        anchor_x: "center" #right, left, center
+        anchor_y: "top"
+        BoxLayout:
+            id: karte2
+            spacing: "70dp"
+            Button:
+                id: id_kralj
+                text: "Kralj"
+                bold: True
+                font_size: 18
+                color: "black"
+                background_color: (191, 191, 191, 0.82)
+                on_press: root.incrementKralj()
+                width: len(self.text) * 10
+                text_size: self.width, None
+                halign:'center'
+                size_hint: .3,.8
+            Button:
+                id: id_deset
+                text: "Deset"
+                bold: True
+                font_size: 18
+                color: "black"
+                background_color: (191, 191, 191, 0.82)
+                on_press: root.incrementDeset()
+                size_hint: .3,.8
+                width: len(self.text) * 10
+                text_size: self.width, None
+                halign:'center'
+              
+    BoxLayout:
+        size_hint: .3,.8
+        pos_hint:{'center_x':.5,'center_y':.5}
+        Button:
+            id: id_kec
+            text: "AS"
+            bold: True
+            font_size: 18
+            color: "black"
+            background_color: (191, 191, 191, 0.82)
+            on_press: root.incrementAS()
+            # size: 95, 50
+            # size_hint: None, None
+            size_hint: .3,.8
+            width: len(self.text) * 10
+            text_size: self.width, None
+            halign:'center'
+            #pos_hint:{'center_x':.5}
+    
+    AnchorLayout:
+        anchor_x: "center" #right, left, center
+        anchor_y: "top"
+        BoxLayout:
+            id: jaki
+            #size_hint: .4,.4
+            spacing: "70dp"
+            Button:
+                id: id_devet
+                text: 'Devet'
+                font_size: 18
+                bold: True
+                color: "blue"
+                background_color: (500, 500, 500, 0.82)
+                on_press: root.incrementDevet()
+                size_hint: .3,.8
+                width: len(self.text) * 10
+                text_size: self.width, None
+                halign:'center'
+                #size: 95, 50
+                #size_hint: None, None
+            Button:
+                id: id_deckoAdut
+                text: "Dečko Adut"
+                color: "blue"
+                font_size: 18
+                bold: True
+                background_color: (500, 500, 500, 0.82)
+                on_press: root.incrementDeckoAdut()
+                size_hint: .3,.8
+                width: len(self.text) * 10
+                text_size: self.width, None
+                halign:'center'
+                #size: 5, 10
+                #size_hint: None, None
+
+    BoxLayout:
+        size_hint: .3,.8
+        pos_hint:{'center_x':.5,'center_y':.5}
+        Button:
+            id: id_zadnji
+            text: "Zadnji"
+            color: "red"
+            font_size: 18
+            bold: True
+            background_color: (191, 191, 191, 0.82)
+            on_press: root.incrementZadnji()
+            #size: 95, 50
+            size_hint: .3,.8
+            width: len(self.text) * 10
+            text_size: self.width, None
+            halign:'center'
+
+    
+    AnchorLayout:
+        anchor_x: "center" #right, left, center
+        anchor_y: "top"
+            
+        BoxLayout:
+            #size_hint: .4,.4
+            spacing: "70dp"
+        #size_hint: .4,.4
+            #pos: root.x, root.top-50
+            Button:
+                id: id_izracunaj
+                text: "Izračunaj"
+                color: "white"
+                background_color: 0,0,2,1
+                font_size:20
+                bold: True
+                width: len(self.text) * 10
+                text_size: self.width, None
+                halign:'center'
+                size_hint: .3,.8
+                #size: 95, 50
+                #size_hint: None, None
+                # size_hint: None, None
+                # width: 100
+                # height: 50
+                on_press: root.incrementAll()
+            Button:
+                id: back
+                font_size:22
+                #font_size: 0.1* root.height
+                bold: True
+                text: "Nazad"
+                on_press: root.decrement()
+                color: "white"
+                background_color: (5,0, 0,1)
+                #icon: 'language-python'
+                width: len(self.text) * 10
+                text_size: self.width, None
+                halign:'center'
+                size_hint: .3,.8
+                #size_hint: .15,.12
+                # size_hint: None, None
+                # width: 100
+                # height: 50
+                #pos_hint :{"x":0.35, "y":0.3}
+                #pos_hint:{'center_x':0.5}
+                # Image:
+                #     source: 'backRed.png'
+                #     center_x: self.parent.center_x
+                #     center_y: self.parent.center_y
+    
+    BoxLayout:
+        id: id_trenutno
+        Label:
+            text:" Trenutno:"
+            color: 1,247/250,2/250,1
+            font_size:20
+            bold: True
+            width: len(self.text) * 10
+            text_size: self.width, None
+            halign:'center'
+            
+
+        Label:
+            id: counter_text
+            text: "0"
+            font_size:20
+            bold: True
+            color: 1,247/250,2/250,1
+    BoxLayout:
+        id: id_ukupno
+        Label:
+            text:" Ukupno:"
+            font_size:20
+            bold: True
+            color: 1,1,1,1
+            width: len(self.text) * 10
+            text_size: self.width, None
+            halign:'center'
+        Label:
+            id: ukupno_text
+            text: ""
+            font_size:24
+            bold: True
+            color: 1,1,1,1
+    BoxLayout:
+    Label:
+        id:napomena_text
+        text:''
+        font_size:20
+        #bold: True
+        color: "white"
+        width: len(self.text) * 10
+        text_size: self.width, None
+        halign:'center'
+            
